@@ -34,11 +34,14 @@ pub use super::snoop::*;
 pub use super::svf::*;
 pub use super::system::*;
 pub use super::wave::*;
+pub use super::wave_stream::*;
 pub use super::wavetable::*;
 pub use super::*;
 
 #[cfg(feature = "files")]
 pub use super::read::*;
+#[cfg(feature = "files")]
+pub use super::read_stream::*;
 
 use std::sync::Arc;
 

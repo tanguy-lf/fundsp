@@ -286,10 +286,13 @@ pub mod sound;
 pub mod svf;
 pub mod system;
 pub mod wave;
+pub mod wave_stream;
 pub mod wavetable;
 
 #[cfg(feature = "files")]
 pub mod read;
+#[cfg(feature = "files")]
+pub mod read_stream;
 
 // For Frame::generate.
 pub use generic_array::sequence::GenericSequence;
