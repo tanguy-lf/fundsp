@@ -779,9 +779,16 @@ impl<T: Float> WaveStream48Player<T> {
             Some(0)
         }else{
             None
-        }
+        };
     }
 
+    pub fn is_end_reached(&self) -> bool{
+        if self.loop_point.is_some(){
+            false
+        }else{
+            (self.index == self.end_point) && self.index > 0
+        }
+    }
     pub fn get_position(&self) -> f64{
         if let Some(sr) = self.sample_rate{
             self.index as f64 / sr
